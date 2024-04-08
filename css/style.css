@@ -87,10 +87,3 @@ h1 {
   text-align: center;
   padding: 20px;
 }
-iframe {
-  display: block;
-  max-width: 100%;
-  width: 100%;
-  font-size: 80vw;
-  max-height: 0.5625em;
-}
