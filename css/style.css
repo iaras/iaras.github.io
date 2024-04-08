@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 main {
   width: 100vw;
 }
@@ -85,5 +88,5 @@ h1 {
   background:#333;
   color:#fff;
   text-align: center;
-  padding: 20px;
+  padding: 6px;
 }
