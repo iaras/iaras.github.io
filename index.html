@@ -1,7 +1,55 @@
----
-layout: default
----
-
-<main class="mdc-toolbar-fixed-adjust">
-    <h2 class="mdc-typography--display2">Hello!</h2>
-</main>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iaras.github.io</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css">
+  <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+      <table id="table">
+        <thead>
+          <tr>
+            <th>column1</th>
+            <th>column2</th>
+            <th>column3</th>
+            <th>column4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+    <footer></footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(registration => {
+        console.log('ServiceWorker registration successful.');
+      }).catch(err => {
+        console.log('ServiceWorker registration failed.');
+      });
+    }
+  </script>
+</body>
+</html>
