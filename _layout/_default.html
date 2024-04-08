@@ -13,5 +13,14 @@
 		{ content }
     <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
     <script>mdc.autoInit();</script>
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('./sw.js').then(registration => {
+					console.log('ServiceWorker registration successful.');
+				}).catch(err => {
+					console.log('ServiceWorker registration failed.');
+				});
+			}
+		</script>
 	</body>
 </html>
