@@ -10,6 +10,17 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css">
   <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
   <script src="./js/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(registration => {
+          console.log('ServiceWorker registration successful.');
+        }).catch(err => {
+          console.log('ServiceWorker registration failed.');
+        });
+      });
+    }
+  </script>
 </head>
 <body>
     <header></header>
@@ -42,14 +53,6 @@
       </table>
     </main>
     <footer></footer>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').then(registration => {
-        console.log('ServiceWorker registration successful.');
-      }).catch(err => {
-        console.log('ServiceWorker registration failed.');
-      });
-    }
-  </script>
+  
 </body>
 </html>
