@@ -2,7 +2,13 @@
 const CACHE_NAME = 'pwa-sample-caches-v1';
 // Cache targets
 const urlsToCache = [
-  '/iaras.github.io/',
+  './',
+  './index.html',
+  './pages/c.html',
+  './css/style.css',
+  './js/index.js',
+  './js/main.js',
+  './images/icon.png'
 ];
 
 self.addEventListener('install', (event) => {
