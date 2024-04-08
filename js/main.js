@@ -1,6 +1,4 @@
 $(document).ready( function () {
-  $('#table').DataTable();
-
   $(".openbtn").click(function () {//ボタンがクリックされたら
     $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
       $("#nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
