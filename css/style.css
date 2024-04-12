@@ -38,6 +38,9 @@ table {
   letter-spacing: 0.1em;
   font-weight: bold;
 }
+#nav-list ul {
+  padding: 0;
+}
 .openbtn {
   position:fixed;
   z-index: 9999;/*ボタンを最前面に*/
@@ -87,7 +90,7 @@ h1 {
   font-size: 1.2rem;
 }
 #header{
-  width:100%;
+  width: 100vw;
   background:#333;
   color:#fff;
   text-align: center;
