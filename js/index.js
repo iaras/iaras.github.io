@@ -6,7 +6,7 @@ $(document).ready( function () {
       url: "../data/ekimemo.json",
       dataSrc: function (json) {
         for (var i = 0, len = json.data.length; i < len; i++) {
-          json.data[i][1] = '<a href="ekimemo/' + json.data[i][0] + '.html">' + json.data[i][1] + '</a>'
+          json.data[i]['名前'] = '<a href="ekimemo/' + json.data[i]['No'] + '.html">' + json.data[i]['名前'] + '</a>'
         }
         return json.data;
       }
