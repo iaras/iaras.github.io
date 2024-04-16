@@ -8,6 +8,7 @@ const urlsToCache = [
   './css/style.css',
   './js/index.js',
   './js/main.js',
+  './data/ekimemo.json',
   './images/icon.png'
 ];
 
