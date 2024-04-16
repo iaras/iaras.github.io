@@ -8,7 +8,9 @@ $(document).ready( function () {
         for (var i = 0, len = json.data.length; i < len; i++) {
           json.data[i][1] = '<a href="ekimemo/' + json.data[i][0] + '.html">' + json.data[i][1] + '</a>'
         }
-      }},
+        return json.data;
+      }
+    },
     columns: [
       {data: 'No'},
       {data: '名前'},
