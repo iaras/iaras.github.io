@@ -3,6 +3,14 @@
 
 main {
   table {
-    border: 1px solid #CCCCCC;
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      background-color: #333333;
+      color: #FFFFFF;
+    }
+    th, td {
+      border: 1px solid #CCCCCC;
+    }
   }
 }
