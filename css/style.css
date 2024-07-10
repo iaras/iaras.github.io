@@ -102,3 +102,26 @@ h1 {
 iframe {
   height: 100%;
 }
+h1.tenki {
+  width: 139px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: 102%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-image: url(https://static.tenki.jp/images/icon/logo/tenkijp-logo.png);
+  background-size: 139px 40px;
+  background-position: 0 0;
+  margin-right: 10px;
+}
+h1.jreast a{
+  font-size: 1.6rem;
+  color: #008803;
+  text-decoration: none;
+}
+h1.jreast span{
+  font-size: 0.8rem;
+  display: block;
+  color: #008803;
+  text-decoration: none;
+}
