@@ -18,4 +18,7 @@ $(document).ready( function () {
       {data: '属性'},
     ]
   });
-} );
+  $('table td:contains("eco")').css('color', 'green');
+  $('table td:contains("heat")').css('color', 'red');
+  $('table td:contains("cool")').css('color', 'blue');
+});
