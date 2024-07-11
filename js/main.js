@@ -14,5 +14,10 @@ $(document).ready( function () {
   append_string += '<li><a href="../pages/tenki.html">天気予報</a></li>'
   append_string += '<li><a href="../pages/jma.html">気象庁</a></li>'
   $("#nav-list ul").append(append_string)
-} );
+
+  //背景色変化
+  $('#fadeButton').click(function() {
+    $('#backgroundElement').addClass('transparent-background');
+  });
+});
 
