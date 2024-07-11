@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+---
+---
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 body {
   margin: 0;
   font-family: "Noto Sans JP", sans-serif;
@@ -102,7 +105,7 @@ h1 {
 iframe {
   height: 100%;
 }
-h1.tenki {
+h1.tenki a {
   width: 139px;
   height: 40px;
   overflow: hidden;
@@ -112,16 +115,28 @@ h1.tenki {
   background-image: url(https://static.tenki.jp/images/icon/logo/tenkijp-logo.png);
   background-size: 139px 40px;
   background-position: 0 0;
-  margin-right: 10px;
+  margin-inline: 10px;
+  display: block;
 }
 h1.jreast a{
   font-size: 1.6rem;
   color: #008803;
   text-decoration: none;
+  margin-inline: 10px;
 }
 h1.jreast span{
   font-size: 0.8rem;
   display: block;
   color: #008803;
   text-decoration: none;
+  margin-inline: 10px;
+}
+.colored-background {
+  background-color: #FFE6E6; /* 淡いピンク */
+  transition: background-color 1s ease-in-out;
+  padding: 20px;
+}
+
+.transparent-background {
+  background-color: transparent;
 }
