@@ -118,7 +118,7 @@ h1.tenki a {
   margin-inline: 10px;
   display: block;
 }
-h1.jreast a{
+h1.jreast a, h1.yahoo_dia a{
   font-size: 1.6rem;
   color: #008803;
   text-decoration: none;
@@ -130,6 +130,19 @@ h1.jreast span{
   color: #008803;
   text-decoration: none;
   margin-inline: 10px;
+}
+h1.weathernews a {
+  width: 184px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: 102%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-image: url(https://weathernews.jp/onebox/img/header/logo_wni.svg);
+  background-size: 180px 40px;
+  background-position: 0 0;
+  margin-inline: 10px;
+  display: block;
 }
 .colored-background {
   background-color: #FFE6E6; /* 淡いピンク */
