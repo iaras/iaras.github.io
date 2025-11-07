@@ -1,35 +1,9 @@
 import Link from 'next/link'
-
-interface Post {
-  slug: string
-  title: string
-  date: string
-  excerpt: string
-}
-
-// サンプルのブログ投稿データ
-const posts: Post[] = [
-  {
-    slug: 'welcome-to-my-blog',
-    title: 'ブログを始めました',
-    date: '2025-01-15',
-    excerpt: 'Next.jsを使って静的ブログサイトを作成しました。GitHub Pagesでホスティングしています。'
-  },
-  {
-    slug: 'about-nextjs',
-    title: 'Next.jsについて',
-    date: '2025-01-10',
-    excerpt: 'Next.jsは、Reactベースのフルスタックフレームワークです。静的サイト生成にも対応しています。'
-  },
-  {
-    slug: 'github-pages-deploy',
-    title: 'GitHub Pagesへのデプロイ',
-    date: '2025-01-05',
-    excerpt: 'GitHub Pagesを使って静的サイトを無料でホスティングする方法について説明します。'
-  }
-]
+import { getAllPosts } from '@/lib/posts'
 
 export default function Home() {
+  const posts = getAllPosts()
+
   return (
     <div>
       <h1 style={{ marginBottom: '2rem', fontSize: '2.5rem' }}>最新の記事</h1>
