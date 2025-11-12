@@ -267,6 +267,8 @@ body {
   justify-content: flex-start;
   position: relative;
   background-color: #fafafa;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .calendar-day.empty {
@@ -285,21 +287,26 @@ body {
 }
 
 .calendar-day-number {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #333;
+  flex-shrink: 0;
 }
 
 .calendar-day-posts {
   display: flex;
   gap: 2px;
   margin-top: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .calendar-post-link {
   color: #2196f3;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .calendar-post-link:hover {
