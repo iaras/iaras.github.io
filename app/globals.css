@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
   min-height: 100vh;
@@ -181,4 +181,230 @@ body {
 
 .back-link:hover {
   text-decoration: underline;
+}
+
+/* Home Layout */
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.sidebar-section {
+  width: 100%;
+}
+
+/* Calendar Styles */
+.calendar {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.calendar-nav {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.calendar-nav:hover {
+  background-color: #f5f5f5;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #fafafa;
+}
+
+.calendar-day.empty {
+  border: none;
+  background: transparent;
+}
+
+.calendar-day.has-post {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+  cursor: pointer;
+}
+
+.calendar-day.has-post:hover {
+  background-color: #bbdefb;
+}
+
+.calendar-day-number {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.calendar-day-posts {
+  display: flex;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.calendar-post-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.calendar-post-link:hover {
+  color: #1976d2;
+}
+
+/* Recent Posts Styles */
+.recent-posts {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-posts-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.recent-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-post-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.recent-post-item:last-child {
+  border-bottom: none;
+}
+
+.recent-post-link {
+  display: block;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.recent-post-link:hover {
+  background-color: #f5f5f5;
+  padding-left: 0.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 4px;
+}
+
+.recent-post-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recent-post-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #2196f3;
+  flex: 1;
+}
+
+.recent-post-link:hover .recent-post-title {
+  color: #1976d2;
+}
+
+.recent-post-date {
+  font-size: 0.875rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .recent-post-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .recent-post-date {
+    font-size: 0.75rem;
+  }
 }
