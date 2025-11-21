@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="home-layout">
       <div className="main-content">
-        <h1 style={{ marginBottom: '2rem', fontSize: '2.5rem' }}>最新の記事</h1>
+        <h1>最新の記事</h1>
         <ul className="post-list">
           {posts.map((post) => (
             <li key={post.slug} className="post-item">

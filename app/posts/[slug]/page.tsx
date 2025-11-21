@@ -20,7 +20,10 @@ export default function Post({ params }: { params: { slug: string } }) {
     <div>
       <Link href="/" className="back-link">← 記事一覧に戻る</Link>
       <article className="post-content">
-        <div className="post-date">{post.date}</div>
+        <header>
+          <div className="post-date">{post.date}</div>
+          <h1>{post.title}</h1>
+        </header>
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </article>
     </div>
