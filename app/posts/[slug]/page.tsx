@@ -24,7 +24,13 @@ export default function Post({ params }: { params: { slug: string } }) {
           <div className="post-date">{post.date}</div>
           <h1>{post.title}</h1>
         </header>
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            h1: () => null, // Markdown内のH1はタイトルと重複するため表示しない
+          }}
+        >
+          {post.content}
+        </ReactMarkdown>
       </article>
     </div>
   )
