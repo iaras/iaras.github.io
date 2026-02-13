@@ -10,7 +10,7 @@ export default function About() {
       </p>
       <h2>技術スタック</h2>
       <ul>
-        <li>Next.js 14</li>
+        <li>Next.js 16</li>
         <li>React 18</li>
         <li>TypeScript</li>
         <li>GitHub Pages</li>
