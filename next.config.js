@@ -7,6 +7,9 @@ const nextConfig = {
   // GitHub Pages uses the repository name as base path for project pages
   // For user pages (username.github.io), basePath should be empty
   basePath: '',
+  experimental: {
+    turbopackUseSystemTlsCerts: true,
+  },
 }
 
 module.exports = nextConfig

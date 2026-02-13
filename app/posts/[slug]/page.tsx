@@ -9,8 +9,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function Post({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
+export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const post = getPostBySlug(slug)
 
   if (!post) {
     return <div>記事が見つかりません</div>
